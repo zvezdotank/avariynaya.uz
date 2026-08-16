@@ -181,6 +181,9 @@ ul,ol{list-style:none;padding:0}
 
 /* кадр без рамки: фон снимка совпадает с фоном страницы, машина «висит» в макете */
 .shot{width:100%;height:auto;border-radius:14px}
+/* сцены с окружением: края не уходят в чёрный, поэтому остаются в рамке */
+.shot--framed{border:1px solid var(--line);border-radius:var(--radius)}
+.shot--wide{grid-column:1 / -1}
 .hero__media{display:grid;gap:12px}
 .hero__media-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
@@ -525,7 +528,11 @@ ul,ol{list-style:none;padding:0}
       <p class="lead" style="margin-bottom:24px">Фото с выездов: что было до, что стало после, и чем работаем.</p>
       <!-- заменить на реальные фото -->
       <div class="gallery">
-        <div class="ph ph--wide"><span class="ph__label">ФОТО: ПРОМЫВКА НАРУЖНОЙ ЛИНИИ ВО ДВОРЕ</span></div>
+        <img class="shot shot--framed shot--wide" src="img/yard-1600.webp"
+             srcset="img/yard-900.webp 900w, img/yard-1600.webp 1600w"
+             sizes="(max-width:640px) 100vw, 96vw"
+             width="1600" height="900" loading="lazy"
+             alt="Двое мастеров промывают наружную линию через открытый колодец во дворе">
         <img class="shot" src="img/pipe-1200.webp"
              srcset="img/pipe-800.webp 800w, img/pipe-1200.webp 1200w"
              sizes="(max-width:640px) 50vw, 24vw"

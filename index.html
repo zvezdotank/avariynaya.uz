@@ -7,6 +7,9 @@
 <meta name="description" content="Аварийная служба прочистки канализации в Ташкенте и области. Выезд круглосуточно, средний приезд 40 минут. Гидродинамика, видеодиагностика, откачка септиков. Оплата после работы, гарантия 6 месяцев.">
 <meta name="theme-color" content="#121110">
 <link rel="canonical" href="https://avariynaya.uz/">
+<link rel="alternate" hreflang="ru" href="https://avariynaya.uz/">
+<link rel="alternate" hreflang="uz" href="https://avariynaya.uz/uz/">
+<link rel="alternate" hreflang="x-default" href="https://avariynaya.uz/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Аварийная">
@@ -133,6 +136,17 @@ ul,ol{list-style:none;padding:0}
 }
 .brand__note{font-size:12px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
 .header__right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+
+/* переключатель языка */
+.lang{
+  display:inline-flex;overflow:hidden;
+  border:1px solid var(--line-strong);border-radius:999px;
+  font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.05em;
+}
+.lang > *{padding:6px 13px;line-height:1.15}
+.lang__on{background:var(--accent);color:var(--bg)}
+.lang__off{color:var(--muted);transition:background-color .15s ease,color .15s ease}
+.lang__off:hover{background:var(--surface);color:var(--text)}
 .status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
 .status__dot{
   width:8px;height:8px;border-radius:50%;background:var(--ok);
@@ -440,6 +454,9 @@ ul,ol{list-style:none;padding:0}
       </div>
     </div>
     <div class="header__right">
+      <p class="lang" role="group" aria-label="Язык сайта">
+        <span class="lang__on" aria-current="true">RU</span><a class="lang__off" href="/uz/" hreflang="uz" lang="uz">UZ</a>
+      </p>
       <p class="status"><span class="status__dot" aria-hidden="true"></span>Диспетчер на линии</p>
       <a class="header__phone" href="tel:+998337947030">+998 33 794-70-30</a>
     </div>

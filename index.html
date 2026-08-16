@@ -57,7 +57,7 @@
   --semi:'Barlow Semi Condensed',ui-monospace,monospace;
 
   --gap-section:clamp(48px,7vw,84px);
-  --header-h:62px;
+  --header-h:74px;
   --radius:12px;
 }
 @supports (color:oklch(0.8 0.15 75)){
@@ -416,7 +416,6 @@ ul,ol{list-style:none;padding:0}
 
 /* закреплённая шапка на узких экранах: бренд, язык и кнопка звонка в одну строку */
 @media (max-width:760px){
-  :root{--header-h:56px}
   .header__in{padding:8px 16px;gap:10px}
   .status{display:none}
   .header__phone{display:none}
@@ -436,9 +435,8 @@ ul,ol{list-style:none;padding:0}
 </head>
 <body>
 
-<div class="hazard" aria-hidden="true"></div>
-
 <header class="header">
+  <div class="hazard" aria-hidden="true"></div>
   <div class="header__in">
     <div class="brand">
       <div class="brand__mark" aria-hidden="true">А</div>

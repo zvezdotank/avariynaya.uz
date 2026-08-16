@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Аварийная — прочистка канализации в Ташкенте, выезд 24/7</title>
+<meta name="description" content="Аварийная служба прочистки канализации в Ташкенте и области. Выезд круглосуточно, средний приезд 40 минут. Гидродинамика, видеодиагностика, откачка септиков. Оплата после работы, гарантия 6 месяцев.">
+<meta name="theme-color" content="#121110">
+<link rel="canonical" href="https://avariynaya.uz/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Аварийная">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Аварийная — засор устраним сегодня же">
+<meta property="og:description" content="Аварийная служба прочистки канализации в Ташкенте. Выезд 24/7, средний приезд 40 минут, оплата после работы.">
+<meta property="og:url" content="https://avariynaya.uz/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f5ae39'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='21' font-weight='700' text-anchor='middle' fill='%23121110'%3E%D0%90%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+
+<style>
+/* ---------- токены ---------- */
+:root{
+  --bg:#121110;
+  --surface:#181614;
+  --line:#2a2724;
+  --line-strong:#3a352f;
+  --text:#f2efe9;
+  --muted:#b3ada3;
+  --dim:#8d877e;
+  --faint:#5a544c;
+
+  --accent:#f5ae39;
+  --accent-bright:#ffc661;
+  --accent-text:#ffc05a;
+  --ok:#5ec966;
+  --accent-ink:#3d3122;
+
+  --accent-weak:rgba(245,174,57,.14);
+  --accent-edge:rgba(245,174,57,.35);
+  --accent-edge-hover:rgba(245,174,57,.55);
+  --accent-ring:rgba(245,174,57,.5);
+  --accent-ring-0:rgba(245,174,57,0);
+
+  --sans:Barlow,Helvetica,Arial,sans-serif;
+  --cond:'Barlow Condensed',Helvetica,Arial,sans-serif;
+  --semi:'Barlow Semi Condensed',ui-monospace,monospace;
+
+  --gap-section:clamp(48px,7vw,84px);
+  --radius:12px;
+}
+@supports (color:oklch(0.8 0.15 75)){
+  :root{
+    --accent:oklch(0.80 0.15 75);
+    --accent-bright:oklch(0.87 0.14 75);
+    --accent-text:oklch(0.85 0.14 75);
+    --ok:oklch(0.75 0.17 145);
+    --accent-weak:oklch(0.80 0.15 75 / 0.14);
+    --accent-edge:oklch(0.80 0.15 75 / 0.35);
+    --accent-edge-hover:oklch(0.80 0.15 75 / 0.55);
+    --accent-ring:oklch(0.80 0.15 75 / 0.5);
+    --accent-ring-0:oklch(0.80 0.15 75 / 0);
+  }
+}
+
+/* ---------- база ---------- */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.4;
+  -webkit-font-smoothing:antialiased;
+  text-wrap:pretty;
+}
+a{color:var(--text);text-decoration:none}
+a:hover{color:var(--accent-text)}
+:where(a,button):focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+img{max-width:100%;display:block}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0}
+ul,ol{list-style:none;padding:0}
+
+@keyframes pulseRing{
+  0%{box-shadow:0 0 0 0 var(--accent-ring)}
+  70%{box-shadow:0 0 0 16px var(--accent-ring-0)}
+  100%{box-shadow:0 0 0 0 var(--accent-ring-0)}
+}
+@keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ---------- каркас ---------- */
+.hazard{height:12px;background:repeating-linear-gradient(135deg,var(--accent) 0 16px,var(--bg) 16px 32px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+.section{padding:0 0 var(--gap-section)}
+
+.h2{
+  margin:0 0 24px;
+  font-family:var(--cond);font-weight:700;
+  font-size:clamp(32px,4.2vw,48px);line-height:1.02;
+  text-transform:uppercase;
+}
+.h2{scroll-margin-top:28px}
+.h2 + .lead{margin-top:-14px}
+.lead{margin:0 0 28px;color:var(--muted);font-size:17px;line-height:1.5;max-width:60ch}
+
+/* ---------- шапка ---------- */
+.header{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:14px 16px;
+  padding:16px 0;border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:11px}
+.brand__mark{
+  flex:none;width:36px;height:36px;border-radius:7px;background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--bg);font-family:var(--cond);font-weight:700;font-size:22px;line-height:1;
+}
+.brand__name{
+  font-family:var(--cond);font-weight:700;font-size:21px;
+  letter-spacing:.01em;line-height:1;text-transform:uppercase;
+}
+.brand__note{font-size:12px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+.header__right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.status__dot{
+  width:8px;height:8px;border-radius:50%;background:var(--ok);
+  animation:blip 2s infinite;flex:none;
+}
+.header__phone{
+  font-family:var(--cond);font-weight:700;font-size:26px;
+  letter-spacing:.01em;white-space:nowrap;
+}
+
+/* ---------- кнопки ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  border-radius:10px;font-weight:700;
+  transition:background-color .15s ease,border-color .15s ease,color .15s ease;
+}
+.btn--call{
+  padding:18px 28px;min-height:64px;
+  background:var(--accent);color:var(--bg);
+  font-size:21px;letter-spacing:.01em;
+  animation:pulseRing 2.6s infinite;
+}
+.btn--call:hover{background:var(--accent-bright);color:var(--bg)}
+.btn--ghost{
+  padding:18px 26px;min-height:64px;gap:10px;
+  border:1px solid var(--line-strong);font-weight:600;font-size:17px;
+}
+.btn--ghost:hover{border-color:var(--text);color:var(--text)}
+.btn__ico{font-size:22px;line-height:1}
+
+/* ---------- первый экран ---------- */
+.hero{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+  gap:clamp(28px,4vw,56px);align-items:center;
+  padding:clamp(36px,6vw,76px) 0;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 13px;border-radius:6px;
+  background:var(--accent-weak);border:1px solid var(--accent-edge);
+  font-size:13px;font-weight:600;color:var(--accent-text);
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px;
+}
+.hero__title{
+  margin:0 0 18px;font-family:var(--cond);font-weight:700;
+  font-size:clamp(34px,9vw,76px);line-height:.95;letter-spacing:-.01em;
+  text-transform:uppercase;overflow-wrap:anywhere;
+}
+.hero__lead{margin:0 0 30px;font-size:clamp(17px,2vw,19px);line-height:1.5;color:var(--muted);max-width:44ch}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.hero__trust{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:14px;color:var(--dim)}
+
+.hero__media{display:grid;gap:12px}
+.hero__media-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* ---------- заглушки под фото ---------- */
+.ph{
+  position:relative;min-width:0;
+  border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  background:repeating-linear-gradient(135deg,#1b1917 0 12px,#211e1b 12px 24px);
+  display:flex;align-items:flex-end;padding:16px;
+}
+.ph--lg{border-radius:14px;padding:18px}
+.ph__label{
+  font-family:var(--semi);font-size:12px;letter-spacing:.06em;
+  color:var(--dim);background:var(--bg);padding:5px 9px;border-radius:5px;
+}
+.ph--lg .ph__label{font-size:13px;padding:7px 11px;border-radius:6px}
+
+/* ---------- цифры ---------- */
+/* по 4 элемента: явные 2 и 4 колонки, чтобы в ряду не оставалось пустой ячейки */
+.stats{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+}
+.stat{background:var(--surface);padding:26px 22px}
+.stat__num{
+  font-family:var(--cond);font-weight:700;
+  font-size:clamp(42px,5vw,58px);line-height:.9;
+}
+.stat__num--accent{color:var(--accent)}
+.stat__unit{font-size:.45em;letter-spacing:.04em}
+.stat__label{font-size:14px;color:var(--dim);margin-top:10px;line-height:1.35}
+
+/* ---------- услуги ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{
+  display:flex;flex-direction:column;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+  transition:border-color .15s ease;
+}
+.card:hover{border-color:var(--accent-edge-hover)}
+.card__title{
+  font-family:var(--cond);font-size:clamp(22px,5.8vw,25px);font-weight:700;
+  text-transform:uppercase;overflow-wrap:anywhere;line-height:1.05;
+}
+.card__text{font-size:15px;color:var(--muted);line-height:1.5;margin:8px 0 18px}
+/* цена прижата вниз — во всём ряду карточек она на одной линии */
+.card__price{margin-top:auto;font-family:var(--cond);font-size:24px;font-weight:700;color:var(--accent)}
+
+.card--accent{
+  background:var(--accent);color:var(--bg);border:none;
+  display:flex;flex-direction:column;justify-content:space-between;gap:18px;
+}
+.card--accent:hover{border:none}
+.card--accent .card__text{color:var(--accent-ink);margin:8px 0 0}
+.card--accent .btn{
+  min-height:56px;border-radius:9px;background:var(--bg);color:var(--text);
+  font-family:var(--cond);font-size:24px;padding:0 16px;text-align:center;
+}
+.card--accent .btn:hover{background:var(--line);color:var(--text)}
+
+/* ---------- звоните, если ---------- */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.case{
+  background:var(--surface);border-left:3px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:22px;font-size:16px;line-height:1.45;
+}
+
+/* ---------- как проходит вызов ---------- */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.step{border-top:2px solid var(--line);padding-top:16px}
+.step--first{border-top-color:var(--accent)}
+.step__num{font-family:var(--cond);font-size:34px;font-weight:700;line-height:1;color:var(--faint)}
+.step--first .step__num{color:var(--accent)}
+.step__title{font-size:18px;font-weight:600;margin:8px 0}
+.step__text{font-size:15px;color:var(--muted);line-height:1.5}
+
+/* ---------- галерея ---------- */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.gallery .ph{aspect-ratio:4/5}
+.gallery .ph--wide{grid-column:1 / -1;aspect-ratio:16/9}
+
+/* ---------- отзывы ---------- */
+.reviews{display:grid;grid-template-columns:1fr;gap:14px}
+.review{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.review__text{font-size:16px;line-height:1.55}
+.review__author{font-size:14px;color:var(--dim);margin-top:auto;padding-top:16px}
+
+/* ---------- география ---------- */
+.geo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,4vw,48px)}
+.geo .lead{margin:0 0 18px;font-size:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;color:var(--muted)}
+.geo .ph{min-height:240px;border-radius:14px;padding:18px}
+
+/* ---------- вопросы ---------- */
+.faq{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.faq__item{background:var(--bg);padding:22px 0}
+.faq__q{font-size:18px;font-weight:600;margin-bottom:6px}
+.faq__a{font-size:16px;color:var(--muted);line-height:1.5;max-width:70ch}
+
+/* ---------- финальный призыв ---------- */
+.final{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;overflow:hidden;
+  padding:0 0 clamp(32px,5vw,60px);text-align:center;
+}
+.final__hazard{
+  height:14px;margin-bottom:clamp(32px,5vw,60px);
+  background:repeating-linear-gradient(135deg,var(--accent) 0 18px,var(--bg) 18px 36px);
+}
+.final__inner{padding:0 clamp(24px,5vw,60px)}
+.final__title{
+  margin:0 0 12px;font-family:var(--cond);font-weight:700;
+  font-size:clamp(30px,5vw,58px);line-height:1;
+  text-transform:uppercase;overflow-wrap:anywhere;
+}
+.final__lead{margin:0 auto 30px;color:var(--muted);font-size:18px;max-width:48ch;line-height:1.5}
+.final__btn{
+  gap:14px;padding:20px 34px;min-height:70px;border-radius:12px;
+  background:var(--accent);color:var(--bg);
+  font-family:var(--cond);font-weight:700;
+  font-size:clamp(28px,3.6vw,40px);letter-spacing:.01em;
+}
+.final__btn:hover{background:var(--accent-bright);color:var(--bg)}
+.final__alt{margin-top:20px;font-size:15px;color:var(--dim)}
+.final__alt a{text-decoration:underline}
+
+/* ---------- подвал ---------- */
+.footer{
+  display:flex;flex-wrap:wrap;gap:18px 40px;justify-content:space-between;
+  padding:34px 0 0;font-size:14px;color:var(--dim);
+}
+.footer a{font-weight:600}
+
+/* ---------- липкая панель звонка ---------- */
+.callbar{
+  position:sticky;bottom:0;left:0;right:0;z-index:50;
+  background:color-mix(in srgb,var(--bg) 95%,transparent);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+@supports not (background:color-mix(in srgb,#000 95%,transparent)){
+  .callbar{background:rgba(18,17,16,.95)}
+}
+.callbar__hazard{height:8px;background:repeating-linear-gradient(135deg,var(--accent) 0 12px,var(--bg) 12px 24px)}
+.callbar__row{
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+  display:flex;gap:10px;align-items:center;
+}
+.callbar__call{
+  flex:1;min-height:56px;border-radius:10px;gap:10px;
+  background:var(--accent);color:var(--bg);font-weight:700;font-size:19px;
+}
+.callbar__call:hover{background:var(--accent-bright);color:var(--bg)}
+.callbar__num{font-family:var(--cond);font-size:clamp(19px,5.4vw,23px);letter-spacing:.01em;white-space:nowrap}
+
+/* ---------- широкие экраны ---------- */
+@media (min-width:900px){
+  .stats,.cases,.steps,.gallery{grid-template-columns:repeat(4,1fr)}
+  .reviews{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ---------- мелкие экраны ---------- */
+@media (max-width:640px){
+  .wrap{padding:0 16px 80px}
+  .header{gap:12px}
+  .header__right{width:100%;justify-content:space-between;gap:12px}
+  .hero__actions .btn{flex:1 1 100%}
+  .hero__media-row{grid-template-columns:1fr}
+  .stats,.cases,.steps{grid-template-columns:1fr}
+  .steps{gap:20px}
+  .gallery .ph{aspect-ratio:4/3}
+  .callbar__row{padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))}
+  .callbar__call{font-size:17px}
+}
+@media (max-width:560px){
+  /* на узких экранах подпись не должна переноситься на две строки */
+  .callbar__long{display:none}
+}
+@media (max-width:340px){
+  .callbar__num{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="hazard" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header class="header">
+    <div class="brand">
+      <div class="brand__mark" aria-hidden="true">А</div>
+      <div>
+        <div class="brand__name">Аварийная</div>
+        <div class="brand__note">Аварийная служба · Ташкент</div>
+      </div>
+    </div>
+    <div class="header__right">
+      <p class="status"><span class="status__dot" aria-hidden="true"></span>Диспетчер на линии</p>
+      <a class="header__phone" href="tel:+998337947030">+998 33 794-70-30</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div>
+        <p class="badge">Выезд 24/7 · 40 минут</p>
+        <h1 class="hero__title">Засор<br>устраним<br>сегодня же</h1>
+        <p class="hero__lead">Вода не уходит, запах, стоки в подвале, переполненный септик. Ташкент и область: частные дома, кафе, магазины, махаллинские сети. Гидродинамика, видеодиагностика, откачка.</p>
+        <div class="hero__actions">
+          <a class="btn btn--call" href="tel:+998337947030"><span class="btn__ico" aria-hidden="true">☎</span>Позвонить сейчас</a>
+          <a class="btn btn--ghost" href="#services">Услуги и цены</a>
+        </div>
+        <p class="hero__trust">
+          <span>Оплата после работы</span><span>Гарантия 6 месяцев</span><span>Без вскрытия пола</span>
+        </p>
+      </div>
+
+      <div class="hero__media">
+        <!-- заменить на реальное фото -->
+        <div class="ph ph--lg" style="aspect-ratio:4/3">
+          <span class="ph__label">ФОТО: ОПРЯТНЫЙ МАСТЕР АВАРИЙНОЙ СЛУЖБЫ — ЧИСТАЯ ФОРМА, ПЕРЧАТКИ, У МАШИНЫ</span>
+        </div>
+        <div class="hero__media-row">
+          <div class="ph" style="aspect-ratio:16/10">
+            <span class="ph__label">ФОТО: МАШИНА ГИДРОДИНАМИКИ</span>
+          </div>
+          <div class="ph" style="aspect-ratio:16/10">
+            <span class="ph__label">ФОТО: КАМЕРА ДЛЯ ДИАГНОСТИКИ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Служба в цифрах">
+      <div class="stat">
+        <p class="stat__num stat__num--accent">40<span class="stat__unit"> МИН</span></p>
+        <p class="stat__label">средний приезд по городу</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">24<span class="stat__unit">/7</span></p>
+        <p class="stat__label">ночью, в выходные и праздники</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">6</p>
+        <p class="stat__label">своих машин, без посредников</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">9<span class="stat__unit"> ЛЕТ</span></p>
+        <p class="stat__label">работаем в Ташкенте</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:var(--gap-section)" aria-labelledby="services">
+      <h2 class="h2" id="services">Услуги и цены</h2>
+      <p class="lead">Точную сумму диспетчер называет по телефону — она зависит от диаметра трубы и характера засора. Доплат на месте не бывает.</p>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card__title">Прочистка засора</h3>
+          <p class="card__text">Кухня, санузел, стояк, наружная линия. Троса или гидродинамика — подбираем по ситуации.</p>
+          <p class="card__price">от 250 000 сум</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Откачка септика и ям</h3>
+          <p class="card__text">Вакуумные машины 4 и 10 м³. Вывоз и утилизация на официальный полигон.</p>
+          <p class="card__price">от 350 000 сум / рейс</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Гидродинамическая промывка</h3>
+          <p class="card__text">Давление до 200 бар: жир, ил, корни, отложения. Для кафе и длинных наружных линий.</p>
+          <p class="card__price">от 600 000 сум</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Видеодиагностика трубы</h3>
+          <p class="card__text">Камера показывает трещины, провалы и точное место засора. Запись отдаём заказчику.</p>
+          <p class="card__price">от 400 000 сум</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Договор для бизнеса</h3>
+          <p class="card__text">Кафе, ТЦ, автомойки, пекарни. Плановая чистка жироуловителей, приоритетный выезд.</p>
+          <p class="card__price">по договору</p>
+        </article>
+        <article class="card card--accent">
+          <div>
+            <h3 class="card__title">Не знаете, что нужно?</h3>
+            <p class="card__text">Опишите проблему по телефону — подскажем решение и цену за две минуты.</p>
+          </div>
+          <a class="btn" href="tel:+998337947030">+998 33 794-70-30</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cases">
+      <h2 class="h2" id="cases">Звоните, если</h2>
+      <ul class="cases">
+        <li class="case">Вода уходит медленно или стоит в раковине и душе</li>
+        <li class="case">Запах из труб в квартире или во дворе</li>
+        <li class="case">Стоки поднимаются в колодце или подтапливают подвал</li>
+        <li class="case">Септик переполнен, а ассенизатор не приезжает</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="how">
+      <h2 class="h2" id="how" style="margin-bottom:28px">Как проходит вызов</h2>
+      <ol class="steps">
+        <li class="step step--first">
+          <p class="step__num">01</p>
+          <h3 class="step__title">Звонок</h3>
+          <p class="step__text">Спрашиваем адрес и что происходит. Называем вилку цены и время приезда.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">02</p>
+          <h3 class="step__title">Выезд бригады</h3>
+          <p class="step__text">Мастер звонит перед выездом и когда подъезжает. Осмотр на месте бесплатный.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">03</p>
+          <h3 class="step__title">Работа</h3>
+          <p class="step__text">Прочистка без вскрытия пола и стен. Убираем за собой, показываем результат.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">04</p>
+          <h3 class="step__title">Оплата и гарантия</h3>
+          <p class="step__text">Платите после работы: наличными, картой или перечислением. Гарантия 6 месяцев.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="works">
+      <h2 class="h2" id="works">Работы и техника</h2>
+      <p class="lead" style="margin-bottom:24px">Фото с выездов: что было до, что стало после, и чем работаем.</p>
+      <!-- заменить на реальные фото -->
+      <div class="gallery">
+        <div class="ph ph--wide"><span class="ph__label">ФОТО: ПРОМЫВКА НАРУЖНОЙ ЛИНИИ ВО ДВОРЕ</span></div>
+        <div class="ph"><span class="ph__label">ФОТО: ТРУБА ДО И ПОСЛЕ</span></div>
+        <div class="ph"><span class="ph__label">ФОТО: ОТКАЧКА СЕПТИКА</span></div>
+        <div class="ph"><span class="ph__label">ФОТО: ЧИСТКА ЖИРОУЛОВИТЕЛЯ В КАФЕ</span></div>
+        <div class="ph"><span class="ph__label">ФОТО: БРИГАДА НА ВЫЕЗДЕ НОЧЬЮ</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="reviews">
+      <h2 class="h2" id="reviews">Отзывы заказчиков</h2>
+      <div class="reviews">
+        <figure class="review">
+          <blockquote class="review__text">Позвонила в 11 вечера, приехали через сорок минут. Стояк в частном доме пробили за час, цену не подняли.</blockquote>
+          <figcaption class="review__author">Дилноза, Юнусабад</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote class="review__text">Обслуживают жироуловитель в нашем кафе по договору. Раз в месяц, без напоминаний, кухня не встаёт.</blockquote>
+          <figcaption class="review__author">Тимур, кафе на Мирзо-Улугбек</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote class="review__text">Другие предлагали копать двор. Здесь сначала запустили камеру, нашли обвал в одном месте — обошлись без раскопок.</blockquote>
+          <figcaption class="review__author">Сардор, Кибрай</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="geo">
+      <div class="geo">
+        <div>
+          <h2 class="h2" id="geo" style="margin-bottom:16px">Куда выезжаем</h2>
+          <p class="lead">Все районы Ташкента и область. За выезд внутри города не доплачиваете.</p>
+          <ul class="tags">
+            <li class="tag">Юнусабад</li>
+            <li class="tag">Чиланзар</li>
+            <li class="tag">Мирзо-Улугбек</li>
+            <li class="tag">Яшнабад</li>
+            <li class="tag">Сергели</li>
+            <li class="tag">Шайхантаур</li>
+            <li class="tag">Бектемир</li>
+            <li class="tag">Кибрай</li>
+            <li class="tag">Зангиата</li>
+            <li class="tag">Чирчик</li>
+          </ul>
+        </div>
+        <!-- заменить на карту зоны выезда -->
+        <div class="ph"><span class="ph__label">КАРТА: ЗОНА ВЫЕЗДА ПО ТАШКЕНТУ</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq">
+      <h2 class="h2" id="faq" style="margin-bottom:22px">Частые вопросы</h2>
+      <div class="faq">
+        <div class="faq__item">
+          <h3 class="faq__q">Сколько ждать приезда?</h3>
+          <p class="faq__a">По городу обычно 40–60 минут, в область — до двух часов. Диспетчер сразу скажет реальное время по вашему адресу.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Работаете ночью и в праздники?</h3>
+          <p class="faq__a">Да, круглосуточно. Ночной тариф выше на 20%, о нём предупреждаем до выезда.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Придётся ломать пол или стену?</h3>
+          <p class="faq__a">В большинстве случаев нет. Заходим через ревизию или колодец, при сомнениях сначала смотрим камерой.</p>
+        </div>
+        <div class="faq__item">
+          <h3 class="faq__q">Что если засор появится снова?</h3>
+          <p class="faq__a">В течение 6 месяцев приезжаем повторно бесплатно, если проблема на том же участке.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" aria-labelledby="final">
+      <div class="final__hazard" aria-hidden="true"></div>
+      <div class="final__inner">
+        <h2 class="final__title" id="final">Засор не подождёт до утра</h2>
+        <p class="final__lead">Один звонок — диспетчер назовёт цену и отправит ближайшую бригаду.</p>
+        <a class="btn final__btn" href="tel:+998337947030"><span aria-hidden="true">☎</span>+998 33 794-70-30</a>
+        <p class="final__alt">Диспетчеры и мастера говорят по-узбекски и по-русски · оплата наличными, Click, Payme, юрлицам по перечислению</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>«Аварийная» · Ташкент и Ташкентская область · ru / uz</div>
+    <div>Круглосуточно · <a href="tel:+998337947030">+998 33 794-70-30</a></div>
+  </footer>
+</div>
+
+<div class="callbar">
+  <div class="callbar__hazard" aria-hidden="true"></div>
+  <div class="callbar__row">
+    <a class="btn callbar__call" href="tel:+998337947030"><span aria-hidden="true">☎</span><span>Позвонить<span class="callbar__long"> · круглосуточно</span></span> <span class="callbar__num">+998 33 794-70-30</span></a>
+  </div>
+</div>
+
+<script type="application/ld+json">
+[{
+  "@context":"https://schema.org",
+  "@type":"Plumber",
+  "@id":"https://avariynaya.uz/#business",
+  "name":"Аварийная",
+  "description":"Аварийная служба прочистки канализации в Ташкенте и Ташкентской области: прочистка засоров, гидродинамическая промывка, видеодиагностика труб, откачка септиков. Круглосуточный выезд.",
+  "url":"https://avariynaya.uz/",
+  "telephone":"+998337947030",
+  "priceRange":"от 250 000 сум",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Ташкент",
+    "addressCountry":"UZ"
+  },
+  "areaServed":[
+    {"@type":"City","name":"Ташкент"},
+    {"@type":"AdministrativeArea","name":"Ташкентская область"}
+  ],
+  "availableLanguage":["ru","uz"],
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens":"00:00","closes":"23:59"
+  }],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog","name":"Услуги",
+    "itemListElement":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Прочистка засора"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Откачка септика и выгребных ям"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Гидродинамическая промывка"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Видеодиагностика трубы"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Договор на обслуживание для бизнеса"}}
+    ]
+  }
+},{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Сколько ждать приезда?","acceptedAnswer":{"@type":"Answer","text":"По городу обычно 40–60 минут, в область — до двух часов. Диспетчер сразу скажет реальное время по вашему адресу."}},
+    {"@type":"Question","name":"Работаете ночью и в праздники?","acceptedAnswer":{"@type":"Answer","text":"Да, круглосуточно. Ночной тариф выше на 20%, о нём предупреждаем до выезда."}},
+    {"@type":"Question","name":"Придётся ломать пол или стену?","acceptedAnswer":{"@type":"Answer","text":"В большинстве случаев нет. Заходим через ревизию или колодец, при сомнениях сначала смотрим камерой."}},
+    {"@type":"Question","name":"Что если засор появится снова?","acceptedAnswer":{"@type":"Answer","text":"В течение 6 месяцев приезжаем повторно бесплатно, если проблема на том же участке."}}
+  ]
+}]
+</script>
+
+</body>
+</html>

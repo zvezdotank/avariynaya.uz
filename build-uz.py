@@ -18,6 +18,8 @@ DST = pathlib.Path('uz/index.html')
 # (что заменить, на что, сколько раз ожидаем встретить)
 PAIRS = [
     # ---------- служебное ----------
+    ('<link rel="preload" href="fonts/fira-sans-condensed-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="fonts/fira-sans-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>',
+     '<link rel="preload" href="../fonts/fira-sans-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="../fonts/fira-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>', 1),
     ('<html lang="ru">', '<html lang="uz">', 1),
     ('<title>Аварийная — прочистка канализации в Ташкенте, выезд 24/7</title>',
      '<title>Avariynaya — Toshkentda kanalizatsiya tozalash, 24/7 chiqamiz</title>', 1),
@@ -35,6 +37,8 @@ PAIRS = [
      '<meta property="og:url" content="https://avariynaya.uz/uz/">', 1),
     ('<meta property="og:site_name" content="Аварийная">',
      '<meta property="og:site_name" content="Avariynaya">', 1),
+    ('<meta property="og:image:alt" content="Мастер аварийной службы у машины с барабаном высокого давления, телефон +998 33 794-70-30">',
+     '<meta property="og:image:alt" content="Avariya xizmati ustasi yuqori bosimli barabanli mashina yonida, telefon +998 33 794-70-30">', 1),
 
     # ---------- переключатель языка ----------
     ('<p class="lang" role="group" aria-label="Язык сайта">\n        <span class="lang__on" aria-current="true">RU</span><a class="lang__off" href="/uz/" hreflang="uz" lang="uz">UZ</a>\n      </p>',
@@ -48,7 +52,7 @@ PAIRS = [
 
     # ---------- первый экран ----------
     ('Выезд 24/7 · 40 минут', '24/7 chiqamiz · 40 daqiqa', 1),
-    ('Устраним<br>засор<br>в день вызова', 'Chaqiruv kuni<br>tiqilishni<br>bartaraf etamiz', 1),
+    ('Устраним засор<br>в день вызова', 'Chaqiruv kuni<br>tiqilishni<br>bartaraf etamiz', 1),
     ('Вода не уходит, запах, стоки в подвале, переполненный септик. Ташкент и область: частные дома, кафе, магазины, махаллинские сети. Гидродинамика, видеодиагностика, откачка.',
      'Suv ketmayapti, hid keladi, oqova yertoʻlada, septik toʻlib ketgan. Toshkent va viloyat: xususiy uylar, kafelar, doʻkonlar, mahalla tarmoqlari. Gidrodinamika, videodiagnostika, soʻrib olish.', 1),
     ('Позвонить сейчас', 'Hozir qoʻngʻiroq qiling', 1),
@@ -275,6 +279,7 @@ def main():
 
     # картинки лежат уровнем выше
     s = s.replace('="img/', '="../img/').replace(', img/', ', ../img/')
+    s = s.replace('url(fonts/', 'url(../fonts/')
 
     if 'Ё' in s or re.search(r'[а-яА-Я]{3,}', re.sub(r'<style>.*?</style>|<!--.*?-->', '', s, flags=re.S)):
         left = set(re.findall(r'[А-Яа-яЁё][А-Яа-яЁё -]{2,}',

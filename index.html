@@ -57,6 +57,7 @@
   --semi:'Barlow Semi Condensed',ui-monospace,monospace;
 
   --gap-section:clamp(48px,7vw,84px);
+  --header-h:62px;
   --radius:12px;
 }
 @supports (color:oklch(0.8 0.15 75)){
@@ -105,7 +106,7 @@ ul,ol{list-style:none;padding:0}
 
 /* ---------- каркас ---------- */
 .hazard{height:12px;background:repeating-linear-gradient(135deg,var(--accent) 0 16px,var(--bg) 16px 32px)}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px 100px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 40px}
 .section{padding:0 0 var(--gap-section)}
 
 .h2{
@@ -114,15 +115,24 @@ ul,ol{list-style:none;padding:0}
   font-size:clamp(32px,4.2vw,48px);line-height:1.02;
   text-transform:uppercase;
 }
-.h2{scroll-margin-top:28px}
+/* якоря не должны заезжать под закреплённую шапку */
+.h2{scroll-margin-top:calc(var(--header-h) + 24px)}
 .h2 + .lead{margin-top:-14px}
 .lead{margin:0 0 28px;color:var(--muted);font-size:17px;line-height:1.5;max-width:60ch}
 
-/* ---------- шапка ---------- */
+/* ---------- шапка: закреплена сверху, единственный фиксированный элемент ---------- */
 .header{
-  display:flex;align-items:center;justify-content:space-between;
-  flex-wrap:wrap;gap:14px 16px;
-  padding:16px 0;border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:60;
+  border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 92%,transparent);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+@supports not (background:color-mix(in srgb,#000 92%,transparent)){
+  .header{background:rgba(18,17,16,.94)}
+}
+.header__in{
+  max-width:1180px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px 16px;
 }
 .brand{display:flex;align-items:center;gap:11px}
 .brand__mark{
@@ -153,9 +163,18 @@ ul,ol{list-style:none;padding:0}
   animation:blip 2s infinite;flex:none;
 }
 .header__phone{
-  font-family:var(--cond);font-weight:700;font-size:26px;
+  font-family:var(--cond);font-weight:700;font-size:24px;
   letter-spacing:.01em;white-space:nowrap;
 }
+/* компактная кнопка звонка — появляется вместо номера на узких экранах */
+.header__call{
+  display:none;flex:none;
+  width:44px;height:44px;border-radius:10px;
+  background:var(--accent);color:var(--bg);font-size:21px;line-height:1;
+  align-items:center;justify-content:center;
+  transition:background-color .15s ease;
+}
+.header__call:hover{background:var(--accent-bright);color:var(--bg)}
 
 /* ---------- кнопки ---------- */
 .btn{
@@ -385,52 +404,28 @@ ul,ol{list-style:none;padding:0}
 }
 .footer a{font-weight:600}
 
-/* ---------- липкая панель звонка ---------- */
-.callbar{
-  position:sticky;bottom:0;left:0;right:0;z-index:50;
-  background:color-mix(in srgb,var(--bg) 95%,transparent);
-  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-}
-@supports not (background:color-mix(in srgb,#000 95%,transparent)){
-  .callbar{background:rgba(18,17,16,.95)}
-}
-.callbar__hazard{height:8px;background:repeating-linear-gradient(135deg,var(--accent) 0 12px,var(--bg) 12px 24px)}
-.callbar__row{
-  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
-  display:flex;gap:10px;align-items:center;
-}
-.callbar__call{
-  flex:1;min-height:56px;border-radius:10px;gap:10px;
-  background:var(--accent);color:var(--bg);font-weight:700;font-size:19px;
-}
-.callbar__call:hover{background:var(--accent-bright);color:var(--bg)}
-.callbar__num{font-family:var(--cond);font-size:clamp(19px,5.4vw,23px);letter-spacing:.01em;white-space:nowrap}
-
-/* ---------- широкие экраны ---------- */
-@media (min-width:900px){
-  .stats,.cases,.steps,.gallery{grid-template-columns:repeat(4,1fr)}
-  .reviews{grid-template-columns:repeat(3,1fr)}
-}
-
 /* ---------- мелкие экраны ---------- */
 @media (max-width:640px){
   .wrap{padding:0 16px 80px}
-  .header{gap:12px}
-  .header__right{width:100%;justify-content:space-between;gap:12px}
   .hero__actions .btn{flex:1 1 100%}
   .hero__media-row{grid-template-columns:1fr}
   .stats,.cases,.steps{grid-template-columns:1fr}
   .steps{gap:20px}
   .gallery .ph{aspect-ratio:4/3}
-  .callbar__row{padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))}
-  .callbar__call{font-size:17px}
 }
-@media (max-width:560px){
-  /* на узких экранах подпись не должна переноситься на две строки */
-  .callbar__long{display:none}
-}
-@media (max-width:340px){
-  .callbar__num{display:none}
+
+/* закреплённая шапка на узких экранах: бренд, язык и кнопка звонка в одну строку */
+@media (max-width:760px){
+  :root{--header-h:56px}
+  .header__in{padding:8px 16px;gap:10px}
+  .status{display:none}
+  .header__phone{display:none}
+  .header__call{display:inline-flex}
+  .header__right{gap:10px;flex-wrap:nowrap}
+  .brand__mark{width:32px;height:32px;font-size:20px}
+  .brand__name{font-size:19px}
+  /* подпись под названием не влезает в строку и ломает высоту шапки */
+  .brand__note{display:none}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -443,9 +438,8 @@ ul,ol{list-style:none;padding:0}
 
 <div class="hazard" aria-hidden="true"></div>
 
-<div class="wrap">
-
-  <header class="header">
+<header class="header">
+  <div class="header__in">
     <div class="brand">
       <div class="brand__mark" aria-hidden="true">А</div>
       <div>
@@ -459,8 +453,12 @@ ul,ol{list-style:none;padding:0}
       </p>
       <p class="status"><span class="status__dot" aria-hidden="true"></span>Диспетчер на линии</p>
       <a class="header__phone" href="tel:+998337947030">+998 33 794-70-30</a>
+      <a class="header__call" href="tel:+998337947030" aria-label="Позвонить"><span aria-hidden="true">☎</span></a>
     </div>
-  </header>
+  </div>
+</header>
+
+<div class="wrap">
 
   <main>
 
@@ -727,13 +725,6 @@ ul,ol{list-style:none;padding:0}
     <div class="footer__by">Сайт и продвижение — <a href="https://sales-hub.uz/?utm_source=avariynaya.uz&amp;utm_medium=referral&amp;utm_campaign=footer" target="_blank" rel="noopener">Sales HUB</a></div>
     <div>Круглосуточно · <a href="tel:+998337947030">+998 33 794-70-30</a></div>
   </footer>
-</div>
-
-<div class="callbar">
-  <div class="callbar__hazard" aria-hidden="true"></div>
-  <div class="callbar__row">
-    <a class="btn callbar__call" href="tel:+998337947030"><span aria-hidden="true">☎</span><span>Позвонить<span class="callbar__long"> · круглосуточно</span></span> <span class="callbar__num">+998 33 794-70-30</span></a>
-  </div>
 </div>
 
 <script type="application/ld+json">

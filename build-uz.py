@@ -44,6 +44,7 @@ PAIRS = [
     ('<div class="brand__name">Аварийная</div>', '<div class="brand__name">Avariynaya</div>', 1),
     ('Аварийная служба · Ташкент', 'Avariya xizmati · Toshkent', 1),
     ('Диспетчер на линии', 'Dispetcher aloqada', 1),
+    ('aria-label="Позвонить"', 'aria-label="Qoʻngʻiroq qilish"', 1),
 
     # ---------- первый экран ----------
     ('Выезд 24/7 · 40 минут', '24/7 chiqamiz · 40 daqiqa', 1),
@@ -201,8 +202,6 @@ PAIRS = [
      '«Avariynaya» · Toshkent va Toshkent viloyati · ru / uz', 1),
     ('Сайт и продвижение — ', 'Sayt va reklama — ', 1),
     ('Круглосуточно · <a href="tel:', 'Kechayu kunduz · <a href="tel:', 1),
-    ('<span>Позвонить<span class="callbar__long"> · круглосуточно</span></span>',
-     '<span>Qoʻngʻiroq qiling<span class="callbar__long"> · kechayu kunduz</span></span>', 1),
 ]
 
 # микроразметка целиком — проще заменить блоком, чем по кусочкам

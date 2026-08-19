@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Аварийная — прочистка канализации в Ташкенте, выезд 24/7</title>
-<meta name="description" content="Аварийная служба прочистки канализации в Ташкенте и области. Выезд круглосуточно, средний приезд 40 минут. Гидродинамика, видеодиагностика, откачка септиков. Оплата после работы, гарантия 6 месяцев.">
+<title>Засор канализации в Ташкенте — устраним в день вызова · Аварийная</title>
+<meta name="description" content="Устраним засор канализации в Ташкенте в день вызова. Аварийная служба круглосуточно, бригада за 40 минут. Прочистка тросом и гидродинамикой, оплата после работы.">
 <meta name="theme-color" content="#121110">
 <link rel="canonical" href="https://avariynaya.uz/">
 <link rel="alternate" hreflang="ru" href="https://avariynaya.uz/">
@@ -14,8 +14,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Аварийная">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:title" content="Аварийная — устраним засор в день вызова">
-<meta property="og:description" content="Аварийная служба прочистки канализации в Ташкенте. Выезд 24/7, средний приезд 40 минут, оплата после работы.">
+<meta property="og:title" content="Засор канализации в Ташкенте — устраним в день вызова">
+<meta property="og:description" content="Аварийная прочистка засора канализации в Ташкенте и области. Выезд 24/7, приезд за 40 минут, оплата после работы.">
 <meta property="og:url" content="https://avariynaya.uz/">
 <meta property="og:image" content="https://avariynaya.uz/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -25,6 +25,9 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f5ae39'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='21' font-weight='700' text-anchor='middle' fill='%23121110'%3E%D0%90%3C/text%3E%3C/svg%3E">
 
+<link rel="preload" as="image" href="img/hero-1100.webp"
+      imagesrcset="img/hero-800.webp 800w, img/hero-1100.webp 1100w, img/hero-1400.webp 1400w"
+      imagesizes="(max-width:640px) 100vw, 46vw" fetchpriority="high">
 <link rel="preload" href="fonts/fira-sans-condensed-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/fira-sans-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -272,6 +275,8 @@ ul,ol{list-style:none;padding:0}
 
 /* ---------- услуги ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+/* блок из четырёх карточек: иначе на широких одна остаётся сиротой во втором ряду */
+.cards--4{grid-template-columns:repeat(2,1fr)}
 .card{
   display:flex;flex-direction:column;
   background:var(--surface);border:1px solid var(--line);
@@ -418,7 +423,7 @@ ul,ol{list-style:none;padding:0}
 
 /* ---------- широкие экраны ---------- */
 @media (min-width:900px){
-  .stats,.cases,.steps,.gallery{grid-template-columns:repeat(4,1fr)}
+  .stats,.cases,.steps,.gallery,.cards--4{grid-template-columns:repeat(4,1fr)}
   .reviews{grid-template-columns:repeat(3,1fr)}
 }
 
@@ -427,7 +432,7 @@ ul,ol{list-style:none;padding:0}
   .wrap{padding:0 16px 80px}
   .hero__actions .btn{flex:1 1 100%}
   .hero__media-row{grid-template-columns:1fr}
-  .stats,.cases,.steps{grid-template-columns:1fr}
+  .stats,.cases,.steps,.cards--4{grid-template-columns:1fr}
   .steps{gap:20px}
 }
 
@@ -480,7 +485,7 @@ ul,ol{list-style:none;padding:0}
     <section class="hero">
       <div>
         <p class="badge">Выезд 24/7 · 40 минут</p>
-        <h1 class="hero__title">Устраним засор<br>в день вызова</h1>
+        <h1 class="hero__title">Устраним засор<br>канализации<br>в день вызова</h1>
         <p class="hero__lead">Вода не уходит, запах, стоки в подвале, переполненный септик. Ташкент и область: частные дома, кафе, магазины, махаллинские сети. Гидродинамика, видеодиагностика, откачка.</p>
         <div class="hero__actions">
           <a class="btn btn--call" href="tel:+998337947030"><span class="btn__ico" aria-hidden="true">☎</span>Позвонить сейчас</a>
@@ -536,7 +541,7 @@ ul,ol{list-style:none;padding:0}
       <p class="lead">Точную сумму диспетчер называет по телефону — она зависит от диаметра трубы и характера засора. Доплат на месте не бывает.</p>
       <div class="cards">
         <article class="card">
-          <h3 class="card__title">Прочистка засора</h3>
+          <h3 class="card__title">Прочистка засора канализации</h3>
           <p class="card__text">Кухня, санузел, стояк, наружная линия. Троса или гидродинамика — подбираем по ситуации.</p>
           <p class="card__price">от 250 000 сум</p>
         </article>
@@ -578,6 +583,29 @@ ul,ol{list-style:none;padding:0}
         <li class="case">Стоки поднимаются в колодце или подтапливают подвал</li>
         <li class="case">Септик переполнен, а ассенизатор не приезжает</li>
       </ul>
+    </section>
+
+    <section class="section" aria-labelledby="why">
+      <h2 class="h2" id="why">Отчего случается засор канализации</h2>
+      <p class="lead">Причина определяет способ прочистки, поэтому диспетчер и спрашивает, что именно происходит. Вот четыре сценария, которые мы разбираем чаще всего в Ташкенте.</p>
+      <div class="cards cards--4">
+        <article class="card">
+          <h3 class="card__title">Жир на стенках</h3>
+          <p class="card__text">Самая частая причина в квартирах и кафе. Жир остывает в трубе и год за годом нарастает слоями, просвет сужается до пальца. Тросом такой налёт только пробивается насквозь — снимает его гидродинамика.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Тряпки и салфетки</h3>
+          <p class="card__text">Влажные салфетки не растворяются, а сбиваются в плотный жгут и цепляются за стык или поворот. Дальше на них наматывается всё остальное. Достаём тросом с насадкой-крюком.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Корни деревьев</h3>
+          <p class="card__text">Беда частных дворов: корень находит трещину в трубе и прорастает внутрь целой бородой. Срезаем фрезой, но потом стоит посмотреть камерой — раз корень зашёл, труба уже повреждена.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Просадка и обвал трубы</h3>
+          <p class="card__text">Здесь засор — только следствие: труба просела, в яме копится осадок. Прочистка даёт неделю-другую, потом всё повторяется. Такое видно только на видеодиагностике, и решать надо земляными работами.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="how">
@@ -770,7 +798,7 @@ ul,ol{list-style:none;padding:0}
   "hasOfferCatalog":{
     "@type":"OfferCatalog","name":"Услуги",
     "itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Прочистка засора"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Прочистка засора канализации"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Откачка септика и выгребных ям"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Гидродинамическая промывка"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Видеодиагностика трубы"}},
@@ -784,7 +812,8 @@ ul,ol{list-style:none;padding:0}
     {"@type":"Question","name":"Сколько ждать приезда?","acceptedAnswer":{"@type":"Answer","text":"По городу обычно 40–60 минут, в область — до двух часов. Диспетчер сразу скажет реальное время по вашему адресу."}},
     {"@type":"Question","name":"Работаете ночью и в праздники?","acceptedAnswer":{"@type":"Answer","text":"Да, круглосуточно. Ночной тариф выше на 20%, о нём предупреждаем до выезда."}},
     {"@type":"Question","name":"Придётся ломать пол или стену?","acceptedAnswer":{"@type":"Answer","text":"В большинстве случаев нет. Заходим через ревизию или колодец, при сомнениях сначала смотрим камерой."}},
-    {"@type":"Question","name":"Что если засор появится снова?","acceptedAnswer":{"@type":"Answer","text":"В течение 6 месяцев приезжаем повторно бесплатно, если проблема на том же участке."}}
+    {"@type":"Question","name":"Что если засор появится снова?","acceptedAnswer":{"@type":"Answer","text":"В течение 6 месяцев приезжаем повторно бесплатно, если проблема на том же участке."}},
+    {"@type":"Question","name":"Отчего случается засор канализации?","acceptedAnswer":{"@type":"Answer","text":"Чаще всего это жир на стенках трубы, влажные салфетки и тряпки, корни деревьев в частных дворах или просадка самой трубы. От причины зависит способ прочистки: жир снимает гидродинамика, тряпки достаёт трос, корни срезает фреза, а просадку видно только на видеодиагностике."}}
   ]
 }]
 </script>

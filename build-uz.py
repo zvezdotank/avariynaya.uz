@@ -20,19 +20,36 @@ PAIRS = [
     # ---------- служебное ----------
     ('<link rel="preload" href="fonts/fira-sans-condensed-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="fonts/fira-sans-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>',
      '<link rel="preload" href="../fonts/fira-sans-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="../fonts/fira-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>', 1),
+
+    # ---------- отчего случается засор ----------
+    ('Отчего случается засор канализации', 'Kanalizatsiya tiqilishi nimadan boʻladi', 1),
+    ('Причина определяет способ прочистки, поэтому диспетчер и спрашивает, что именно происходит. Вот четыре сценария, которые мы разбираем чаще всего в Ташкенте.',
+     'Sabab tozalash usulini belgilaydi, shuning uchun dispetcher nima boʻlayotganini soʻraydi. Toshkentda eng koʻp uchraydigan toʻrtta holat.', 1),
+    ('Жир на стенках', 'Devordagi yogʻ', 1),
+    ('Самая частая причина в квартирах и кафе. Жир остывает в трубе и год за годом нарастает слоями, просвет сужается до пальца. Тросом такой налёт только пробивается насквозь — снимает его гидродинамика.',
+     'Kvartira va kafelarda eng koʻp uchraydigan sabab. Yogʻ quvurda soviydi va yildan yilga qatlam boʻlib oʻsadi, teshik barmoqdek qoladi. Tros bunday qatqaloqni faqat teshib oʻtadi — uni gidrodinamika olib tashlaydi.', 1),
+    ('Тряпки и салфетки', 'Latta va salfetkalar', 1),
+    ('Влажные салфетки не растворяются, а сбиваются в плотный жгут и цепляются за стык или поворот. Дальше на них наматывается всё остальное. Достаём тросом с насадкой-крюком.',
+     'Nam salfetkalar erimaydi, zich jgutga aylanib, ulanish yoki burilishga ilashadi. Keyin ularga qolgani oʻraladi. Ilmoqli tros bilan chiqaramiz.', 1),
+    ('Корни деревьев', 'Daraxt ildizlari', 1),
+    ('Беда частных дворов: корень находит трещину в трубе и прорастает внутрь целой бородой. Срезаем фрезой, но потом стоит посмотреть камерой — раз корень зашёл, труба уже повреждена.',
+     'Xususiy hovlilarning muammosi: ildiz quvurdagi yoriqni topib, ichkariga soqoldek oʻsib kiradi. Frеza bilan kesamiz, keyin kamera bilan koʻrgan maʼqul — ildiz kirgan boʻlsa, quvur allaqachon shikastlangan.', 1),
+    ('Просадка и обвал трубы', 'Quvurning choʻkishi va oʻpirilishi', 1),
+    ('Здесь засор — только следствие: труба просела, в яме копится осадок. Прочистка даёт неделю-другую, потом всё повторяется. Такое видно только на видеодиагностике, и решать надо земляными работами.',
+     'Bu yerda tiqilish — faqat oqibat: quvur choʻkkan, chuqurchada choʻkma yigʻiladi. Tozalash bir-ikki haftaga yetadi, keyin hammasi takrorlanadi. Buni faqat videodiagnostika koʻrsatadi, yer ishlari bilan hal qilinadi.', 1),
     ('<html lang="ru">', '<html lang="uz">', 1),
-    ('<title>Аварийная — прочистка канализации в Ташкенте, выезд 24/7</title>',
-     '<title>Avariynaya — Toshkentda kanalizatsiya tozalash, 24/7 chiqamiz</title>', 1),
-    ('content="Аварийная служба прочистки канализации в Ташкенте и области. Выезд круглосуточно, средний приезд 40 минут. Гидродинамика, видеодиагностика, откачка септиков. Оплата после работы, гарантия 6 месяцев."',
-     'content="Toshkent va viloyatda kanalizatsiya tozalash avariya xizmati. Kechayu kunduz chiqamiz, oʻrtacha 40 daqiqada yetib boramiz. Gidrodinamika, videodiagnostika, septik soʻrib olish. Toʻlov ish tugagach, 6 oy kafolat."', 1),
+    ('<title>Засор канализации в Ташкенте — устраним в день вызова · Аварийная</title>',
+     '<title>Toshkentda kanalizatsiya tiqilishi — chaqiruv kuni bartaraf etamiz · Avariynaya</title>', 1),
+    ('content="Устраним засор канализации в Ташкенте в день вызова. Аварийная служба круглосуточно, бригада за 40 минут. Прочистка тросом и гидродинамикой, оплата после работы."',
+     'content="Toshkentda kanalizatsiya tiqilishini chaqiruv kuni bartaraf etamiz. Avariya xizmati kechayu kunduz, brigada 40 daqiqada. Tros va gidrodinamika bilan tozalash, toʻlov ish tugagach."', 1),
     ('<link rel="canonical" href="https://avariynaya.uz/">',
      '<link rel="canonical" href="https://avariynaya.uz/uz/">', 1),
     ('<meta property="og:locale" content="ru_RU">',
      '<meta property="og:locale" content="uz_UZ">', 1),
-    ('content="Аварийная — устраним засор в день вызова"',
-     'content="Avariynaya — chaqiruv kuni tiqilishni bartaraf etamiz"', 1),
-    ('content="Аварийная служба прочистки канализации в Ташкенте. Выезд 24/7, средний приезд 40 минут, оплата после работы."',
-     'content="Toshkentda kanalizatsiya tozalash avariya xizmati. 24/7 chiqamiz, oʻrtacha 40 daqiqada yetib boramiz, toʻlov ish tugagach."', 1),
+    ('content="Засор канализации в Ташкенте — устраним в день вызова"',
+     'content="Toshkentda kanalizatsiya tiqilishi — chaqiruv kuni bartaraf etamiz"', 1),
+    ('content="Аварийная прочистка засора канализации в Ташкенте и области. Выезд 24/7, приезд за 40 минут, оплата после работы."',
+     'content="Toshkent va viloyatda kanalizatsiya tiqilishini avariya tozalash. 24/7 chiqamiz, 40 daqiqada yetib boramiz, toʻlov ish tugagach."', 1),
     ('<meta property="og:url" content="https://avariynaya.uz/">',
      '<meta property="og:url" content="https://avariynaya.uz/uz/">', 1),
     ('<meta property="og:site_name" content="Аварийная">',
@@ -52,7 +69,7 @@ PAIRS = [
 
     # ---------- первый экран ----------
     ('Выезд 24/7 · 40 минут', '24/7 chiqamiz · 40 daqiqa', 1),
-    ('Устраним засор<br>в день вызова', 'Chaqiruv kuni<br>tiqilishni<br>bartaraf etamiz', 1),
+    ('Устраним засор<br>канализации<br>в день вызова', 'Chaqiruv kuni<br>kanalizatsiya<br>tiqilishini yechamiz', 1),
     ('Вода не уходит, запах, стоки в подвале, переполненный септик. Ташкент и область: частные дома, кафе, магазины, махаллинские сети. Гидродинамика, видеодиагностика, откачка.',
      'Suv ketmayapti, hid keladi, oqova yertoʻlada, septik toʻlib ketgan. Toshkent va viloyat: xususiy uylar, kafelar, doʻkonlar, mahalla tarmoqlari. Gidrodinamika, videodiagnostika, soʻrib olish.', 1),
     ('Позвонить сейчас', 'Hozir qoʻngʻiroq qiling', 1),
@@ -75,7 +92,7 @@ PAIRS = [
     ('Точную сумму диспетчер называет по телефону — она зависит от диаметра трубы и характера засора. Доплат на месте не бывает.',
      'Aniq summani dispetcher telefonda aytadi — u quvur diametri va tiqilish turiga bogʻliq. Joyida qoʻshimcha toʻlov boʻlmaydi.', 1),
 
-    ('Прочистка засора', 'Tiqilishni tozalash', 1),
+    ('Прочистка засора канализации', 'Kanalizatsiya tiqilishini tozalash', 1),
     ('Кухня, санузел, стояк, наружная линия. Троса или гидродинамика — подбираем по ситуации.',
      'Oshxona, hammom, stoyak, tashqi liniya. Tros yoki gidrodinamika — vaziyatga qarab tanlaymiz.', 1),
     ('от 250 000 сум', '250 000 soʻmdan', 1),
@@ -237,7 +254,7 @@ LD_UZ = '''[{
   "hasOfferCatalog":{
     "@type":"OfferCatalog","name":"Xizmatlar",
     "itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiqilishni tozalash"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kanalizatsiya tiqilishini tozalash"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Septik va chohlarni soʻrib olish"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gidrodinamik yuvish"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Quvur videodiagnostikasi"}},
@@ -252,7 +269,8 @@ LD_UZ = '''[{
     {"@type":"Question","name":"Yetib kelishni qancha kutish kerak?","acceptedAnswer":{"@type":"Answer","text":"Shahar boʻylab odatda 40–60 daqiqa, viloyatga — ikki soatgacha. Dispetcher manzilingiz boʻyicha aniq vaqtni darrov aytadi."}},
     {"@type":"Question","name":"Tunda va bayramlarda ishlaysizmi?","acceptedAnswer":{"@type":"Answer","text":"Ha, kechayu kunduz. Tungi tarif 20% qimmat, bu haqda chiqishdan oldin ogohlantiramiz."}},
     {"@type":"Question","name":"Pol yoki devorni buzish kerak boʻladimi?","acceptedAnswer":{"@type":"Answer","text":"Koʻp hollarda yoʻq. Reviziya yoki quduq orqali kiramiz, shubha boʻlsa avval kamera bilan koʻramiz."}},
-    {"@type":"Question","name":"Tiqilish yana paydo boʻlsa-chi?","acceptedAnswer":{"@type":"Answer","text":"6 oy ichida oʻsha joyda muammo takrorlansa, bepul qayta chiqamiz."}}
+    {"@type":"Question","name":"Tiqilish yana paydo boʻlsa-chi?","acceptedAnswer":{"@type":"Answer","text":"6 oy ichida oʻsha joyda muammo takrorlansa, bepul qayta chiqamiz."}},
+    {"@type":"Question","name":"Kanalizatsiya tiqilishi nimadan boʻladi?","acceptedAnswer":{"@type":"Answer","text":"Koʻpincha bu quvur devoridagi yogʻ, nam salfetka va lattalar, xususiy hovlilarda daraxt ildizlari yoki quvurning choʻkishi. Sabab tozalash usulini belgilaydi: yogʻni gidrodinamika oladi, lattani tros chiqaradi, ildizni freza kesadi, choʻkishni esa faqat videodiagnostika koʻrsatadi."}}
   ]
 }]'''
 

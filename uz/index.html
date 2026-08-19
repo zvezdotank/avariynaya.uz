@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Avariynaya — Toshkentda kanalizatsiya tozalash, 24/7 chiqamiz</title>
-<meta name="description" content="Toshkent va viloyatda kanalizatsiya tozalash avariya xizmati. Kechayu kunduz chiqamiz, oʻrtacha 40 daqiqada yetib boramiz. Gidrodinamika, videodiagnostika, septik soʻrib olish. Toʻlov ish tugagach, 6 oy kafolat.">
+<title>Toshkentda kanalizatsiya tiqilishi — chaqiruv kuni bartaraf etamiz · Avariynaya</title>
+<meta name="description" content="Toshkentda kanalizatsiya tiqilishini chaqiruv kuni bartaraf etamiz. Avariya xizmati kechayu kunduz, brigada 40 daqiqada. Tros va gidrodinamika bilan tozalash, toʻlov ish tugagach.">
 <meta name="theme-color" content="#121110">
 <link rel="canonical" href="https://avariynaya.uz/uz/">
 <link rel="alternate" hreflang="ru" href="https://avariynaya.uz/">
@@ -14,8 +14,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Avariynaya">
 <meta property="og:locale" content="uz_UZ">
-<meta property="og:title" content="Avariynaya — chaqiruv kuni tiqilishni bartaraf etamiz">
-<meta property="og:description" content="Toshkentda kanalizatsiya tozalash avariya xizmati. 24/7 chiqamiz, oʻrtacha 40 daqiqada yetib boramiz, toʻlov ish tugagach.">
+<meta property="og:title" content="Toshkentda kanalizatsiya tiqilishi — chaqiruv kuni bartaraf etamiz">
+<meta property="og:description" content="Toshkent va viloyatda kanalizatsiya tiqilishini avariya tozalash. 24/7 chiqamiz, 40 daqiqada yetib boramiz, toʻlov ish tugagach.">
 <meta property="og:url" content="https://avariynaya.uz/uz/">
 <meta property="og:image" content="https://avariynaya.uz/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -25,6 +25,9 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f5ae39'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='21' font-weight='700' text-anchor='middle' fill='%23121110'%3E%D0%90%3C/text%3E%3C/svg%3E">
 
+<link rel="preload" as="image" href="../img/hero-1100.webp"
+      imagesrcset="../img/hero-800.webp 800w, ../img/hero-1100.webp 1100w, ../img/hero-1400.webp 1400w"
+      imagesizes="(max-width:640px) 100vw, 46vw" fetchpriority="high">
 <link rel="preload" href="../fonts/fira-sans-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/fira-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -272,6 +275,8 @@ ul,ol{list-style:none;padding:0}
 
 /* ---------- услуги ---------- */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+/* блок из четырёх карточек: иначе на широких одна остаётся сиротой во втором ряду */
+.cards--4{grid-template-columns:repeat(2,1fr)}
 .card{
   display:flex;flex-direction:column;
   background:var(--surface);border:1px solid var(--line);
@@ -418,7 +423,7 @@ ul,ol{list-style:none;padding:0}
 
 /* ---------- широкие экраны ---------- */
 @media (min-width:900px){
-  .stats,.cases,.steps,.gallery{grid-template-columns:repeat(4,1fr)}
+  .stats,.cases,.steps,.gallery,.cards--4{grid-template-columns:repeat(4,1fr)}
   .reviews{grid-template-columns:repeat(3,1fr)}
 }
 
@@ -427,7 +432,7 @@ ul,ol{list-style:none;padding:0}
   .wrap{padding:0 16px 80px}
   .hero__actions .btn{flex:1 1 100%}
   .hero__media-row{grid-template-columns:1fr}
-  .stats,.cases,.steps{grid-template-columns:1fr}
+  .stats,.cases,.steps,.cards--4{grid-template-columns:1fr}
   .steps{gap:20px}
 }
 
@@ -480,7 +485,7 @@ ul,ol{list-style:none;padding:0}
     <section class="hero">
       <div>
         <p class="badge">24/7 chiqamiz · 40 daqiqa</p>
-        <h1 class="hero__title">Chaqiruv kuni<br>tiqilishni<br>bartaraf etamiz</h1>
+        <h1 class="hero__title">Chaqiruv kuni<br>kanalizatsiya<br>tiqilishini yechamiz</h1>
         <p class="hero__lead">Suv ketmayapti, hid keladi, oqova yertoʻlada, septik toʻlib ketgan. Toshkent va viloyat: xususiy uylar, kafelar, doʻkonlar, mahalla tarmoqlari. Gidrodinamika, videodiagnostika, soʻrib olish.</p>
         <div class="hero__actions">
           <a class="btn btn--call" href="tel:+998337947030"><span class="btn__ico" aria-hidden="true">☎</span>Hozir qoʻngʻiroq qiling</a>
@@ -536,7 +541,7 @@ ul,ol{list-style:none;padding:0}
       <p class="lead">Aniq summani dispetcher telefonda aytadi — u quvur diametri va tiqilish turiga bogʻliq. Joyida qoʻshimcha toʻlov boʻlmaydi.</p>
       <div class="cards">
         <article class="card">
-          <h3 class="card__title">Tiqilishni tozalash</h3>
+          <h3 class="card__title">Kanalizatsiya tiqilishini tozalash</h3>
           <p class="card__text">Oshxona, hammom, stoyak, tashqi liniya. Tros yoki gidrodinamika — vaziyatga qarab tanlaymiz.</p>
           <p class="card__price">250 000 soʻmdan</p>
         </article>
@@ -578,6 +583,29 @@ ul,ol{list-style:none;padding:0}
         <li class="case">oqova quduqda koʻtarilsa yoki yertoʻlani bossa</li>
         <li class="case">septik toʻlib ketgan, assenizator esa kelmayotgan boʻlsa</li>
       </ul>
+    </section>
+
+    <section class="section" aria-labelledby="why">
+      <h2 class="h2" id="why">Kanalizatsiya tiqilishi nimadan boʻladi</h2>
+      <p class="lead">Sabab tozalash usulini belgilaydi, shuning uchun dispetcher nima boʻlayotganini soʻraydi. Toshkentda eng koʻp uchraydigan toʻrtta holat.</p>
+      <div class="cards cards--4">
+        <article class="card">
+          <h3 class="card__title">Devordagi yogʻ</h3>
+          <p class="card__text">Kvartira va kafelarda eng koʻp uchraydigan sabab. Yogʻ quvurda soviydi va yildan yilga qatlam boʻlib oʻsadi, teshik barmoqdek qoladi. Tros bunday qatqaloqni faqat teshib oʻtadi — uni gidrodinamika olib tashlaydi.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Latta va salfetkalar</h3>
+          <p class="card__text">Nam salfetkalar erimaydi, zich jgutga aylanib, ulanish yoki burilishga ilashadi. Keyin ularga qolgani oʻraladi. Ilmoqli tros bilan chiqaramiz.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Daraxt ildizlari</h3>
+          <p class="card__text">Xususiy hovlilarning muammosi: ildiz quvurdagi yoriqni topib, ichkariga soqoldek oʻsib kiradi. Frеza bilan kesamiz, keyin kamera bilan koʻrgan maʼqul — ildiz kirgan boʻlsa, quvur allaqachon shikastlangan.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Quvurning choʻkishi va oʻpirilishi</h3>
+          <p class="card__text">Bu yerda tiqilish — faqat oqibat: quvur choʻkkan, chuqurchada choʻkma yigʻiladi. Tozalash bir-ikki haftaga yetadi, keyin hammasi takrorlanadi. Buni faqat videodiagnostika koʻrsatadi, yer ishlari bilan hal qilinadi.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section" aria-labelledby="how">
@@ -771,7 +799,7 @@ ul,ol{list-style:none;padding:0}
   "hasOfferCatalog":{
     "@type":"OfferCatalog","name":"Xizmatlar",
     "itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiqilishni tozalash"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kanalizatsiya tiqilishini tozalash"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Septik va chohlarni soʻrib olish"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gidrodinamik yuvish"}},
       {"@type":"Offer","itemOffered":{"@type":"Service","name":"Quvur videodiagnostikasi"}},
@@ -786,7 +814,8 @@ ul,ol{list-style:none;padding:0}
     {"@type":"Question","name":"Yetib kelishni qancha kutish kerak?","acceptedAnswer":{"@type":"Answer","text":"Shahar boʻylab odatda 40–60 daqiqa, viloyatga — ikki soatgacha. Dispetcher manzilingiz boʻyicha aniq vaqtni darrov aytadi."}},
     {"@type":"Question","name":"Tunda va bayramlarda ishlaysizmi?","acceptedAnswer":{"@type":"Answer","text":"Ha, kechayu kunduz. Tungi tarif 20% qimmat, bu haqda chiqishdan oldin ogohlantiramiz."}},
     {"@type":"Question","name":"Pol yoki devorni buzish kerak boʻladimi?","acceptedAnswer":{"@type":"Answer","text":"Koʻp hollarda yoʻq. Reviziya yoki quduq orqali kiramiz, shubha boʻlsa avval kamera bilan koʻramiz."}},
-    {"@type":"Question","name":"Tiqilish yana paydo boʻlsa-chi?","acceptedAnswer":{"@type":"Answer","text":"6 oy ichida oʻsha joyda muammo takrorlansa, bepul qayta chiqamiz."}}
+    {"@type":"Question","name":"Tiqilish yana paydo boʻlsa-chi?","acceptedAnswer":{"@type":"Answer","text":"6 oy ichida oʻsha joyda muammo takrorlansa, bepul qayta chiqamiz."}},
+    {"@type":"Question","name":"Kanalizatsiya tiqilishi nimadan boʻladi?","acceptedAnswer":{"@type":"Answer","text":"Koʻpincha bu quvur devoridagi yogʻ, nam salfetka va lattalar, xususiy hovlilarda daraxt ildizlari yoki quvurning choʻkishi. Sabab tozalash usulini belgilaydi: yogʻni gidrodinamika oladi, lattani tros chiqaradi, ildizni freza kesadi, choʻkishni esa faqat videodiagnostika koʻrsatadi."}}
   ]
 }]
 </script>
